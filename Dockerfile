@@ -12,7 +12,8 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Étape 2 : Créer une image légère pour exécuter l'application
-FROM openjdk:17-jdk-slim
+#FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
 # Créer un répertoire pour l'application
 WORKDIR /app
